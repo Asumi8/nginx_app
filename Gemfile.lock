@@ -88,6 +88,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    kgio (2.11.4)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -104,6 +105,8 @@ GEM
     msgpack (1.6.0)
     nio4r (2.5.8)
     nokogiri (1.13.9-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.13.9-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.4)
     public_suffix (5.0.0)
@@ -143,6 +146,7 @@ GEM
       method_source
       rake (>= 12.2)
       thor (~> 1.0)
+    raindrops (0.20.0)
     rake (13.0.6)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
@@ -181,6 +185,12 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    unicorn (6.1.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
+    unicorn-rails (2.2.1)
+      rack
+      unicorn
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -205,6 +215,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
@@ -221,6 +232,8 @@ DEPENDENCIES
   spring
   turbolinks (~> 5)
   tzinfo-data
+  unicorn
+  unicorn-rails
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
